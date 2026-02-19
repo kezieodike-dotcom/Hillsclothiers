@@ -15,7 +15,7 @@ const Investors: React.FC = () => {
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover opacity-30 grayscale" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="Corporate" />
+          <img className="w-full h-full object-cover opacity-30" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000" alt="Corporate" />
           <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/90 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -95,7 +95,7 @@ const Investors: React.FC = () => {
                   <span className="material-icons text-black text-2xl">architecture</span>
                 </div>
                 <div className="md:w-[45%] pl-20">
-                  <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&q=80&w=800" className="rounded-[2.5rem] grayscale hover:grayscale-0 transition-all duration-1000 border border-gold/10 shadow-2xl" alt="Lagos Hub" />
+                  <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&q=80&w=800" className="rounded-[2.5rem] transition-all duration-1000 border border-gold/10 shadow-2xl" alt="Lagos Hub" />
                 </div>
               </div>
               <div className="relative flex flex-col md:flex-row-reverse items-center justify-between">
@@ -108,7 +108,7 @@ const Investors: React.FC = () => {
                   <span className="material-icons text-gold text-2xl">public</span>
                 </div>
                 <div className="md:w-[45%] pr-20">
-                  <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800" className="rounded-[2.5rem] grayscale hover:grayscale-0 transition-all duration-1000 border border-gold/10 shadow-2xl" alt="African Markets" />
+                  <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=800" className="rounded-[2.5rem] transition-all duration-1000 border border-gold/10 shadow-2xl" alt="African Markets" />
                 </div>
               </div>
             </div>

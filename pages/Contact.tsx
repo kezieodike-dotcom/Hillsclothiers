@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
 
             {/* Map Embed Stubs */}
             <section className="h-[500px] w-full bg-slate-200 dark:bg-surface-dark relative">
-                <div className="absolute inset-0 grayscale flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center space-y-4">
                         <span className="material-icons text-6xl text-gold/20">map</span>
                         <p className="text-[10px] uppercase tracking-widest font-bold text-slate-400">Interactive Map Implementation Pending</p>

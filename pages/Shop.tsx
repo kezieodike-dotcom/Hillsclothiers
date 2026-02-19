@@ -101,7 +101,7 @@ const Shop: React.FC<ShopProps> = ({ onNavigate }) => {
             {MOCK_PRODUCTS.map(product => (
               <div key={product.id} className="group cursor-pointer" onClick={() => onNavigate(Page.CHECKOUT)}>
                 <div className="relative aspect-[3/4] overflow-hidden bg-slate-50 dark:bg-surface-dark mb-6 rounded-2xl shadow-lg border border-slate-100 dark:border-gold/5">
-                  <img className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" src={product.image} alt={product.name} />
+                  <img className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src={product.image} alt={product.name} />
                   {product.tag && (
                     <div className="absolute top-4 left-4 bg-gold text-black text-[9px] font-bold px-3 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg">
                       {product.tag}

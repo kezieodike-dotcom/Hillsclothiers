@@ -92,7 +92,7 @@ const Checkout: React.FC<CheckoutProps> = ({ onNavigate }) => {
                     <span className="material-icons text-3xl">verified_user</span>
                   </div>
                 </div>
-                <div className="p-12 border-2 border-slate-200 dark:border-gold/10 rounded-[3rem] flex flex-col items-center gap-6 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700 cursor-pointer">
+                <div className="p-12 border-2 border-slate-200 dark:border-gold/10 rounded-[3rem] flex flex-col items-center gap-6 opacity-40 hover:opacity-100 transition-all duration-700 cursor-pointer">
                   <div className="w-14 h-14 bg-[#f15a24] rounded-full flex items-center justify-center text-white text-2xl font-black">F</div>
                   <span className="text-slate-900 dark:text-white text-3xl font-display font-bold tracking-tighter">Flutterwave</span>
                   <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">Regional Gateway</span>

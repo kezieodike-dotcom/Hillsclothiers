@@ -14,7 +14,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="absolute inset-0 z-0 scale-110 lg:scale-100">
           <img
             alt="Premium Fashion"
-            className="w-full h-full object-cover opacity-60 grayscale"
+            className="w-full h-full object-cover opacity-60"
             src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=2000"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background-dark/95 via-background-dark/70 to-background-dark"></div>
@@ -92,7 +92,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 shadow-2xl">
                 <img
                   alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                   src={item.image}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
@@ -139,7 +139,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   <img
                     src="/assets/director_portrait.png"
                     alt="UGWU NNAMDI EMMANUEL"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 hover:scale-100"
+                    className="w-full h-full object-cover transition-all duration-1000 scale-105 hover:scale-100"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40"></div>
                 </div>
@@ -176,7 +176,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               "/assets/work_5.png"
             ]).map((img, idx) => (
               <div key={idx} className="w-[300px] md:w-[450px] aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-gold/10 group relative flex-shrink-0">
-                <img src={img} alt={`Work Sample ${idx}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 grayscale hover:grayscale-0" />
+                <img src={img} alt={`Work Sample ${idx}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-10">
                   <span className="text-gold text-[10px] font-bold uppercase tracking-widest mb-2 font-display italic">Signature Fit</span>
                   <p className="text-white text-lg font-display font-bold">HILLS Bespoke Masterpiece</p>

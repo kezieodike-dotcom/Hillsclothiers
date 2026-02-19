@@ -36,8 +36,8 @@ const CustomOrder: React.FC<CustomOrderProps> = ({ onNavigate }) => {
           {steps.map(s => (
             <div key={s.id} className="flex flex-col items-center gap-4">
               <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold transition-all duration-500 ${s.id < step ? 'bg-gold text-black shadow-lg shadow-gold/20' :
-                  s.id === step ? 'bg-background-dark border-2 border-gold text-gold ring-8 ring-gold/5 shadow-2xl' :
-                    'bg-slate-100 dark:bg-surface-dark text-slate-400 border border-slate-200 dark:border-gold/10'
+                s.id === step ? 'bg-background-dark border-2 border-gold text-gold ring-8 ring-gold/5 shadow-2xl' :
+                  'bg-slate-100 dark:bg-surface-dark text-slate-400 border border-slate-200 dark:border-gold/10'
                 }`}>
                 {s.id < step ? <span className="material-icons text-lg">check</span> : s.id}
               </div>
@@ -56,7 +56,7 @@ const CustomOrder: React.FC<CustomOrderProps> = ({ onNavigate }) => {
             <div className="space-y-12">
               <div className="bg-background-dark rounded-3xl overflow-hidden border border-gold/20 shadow-2xl group relative aspect-[16/9]">
                 <img
-                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000 grayscale"
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000"
                   src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&q=80&w=1200"
                   alt="Tailoring"
                 />
@@ -107,7 +107,7 @@ const CustomOrder: React.FC<CustomOrderProps> = ({ onNavigate }) => {
             <div className="space-y-10">
               <div className="flex gap-6 items-center">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-xl border border-gold/10">
-                  <img className="w-full h-full object-cover grayscale" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=200" alt="Fabric" />
+                  <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=200" alt="Fabric" />
                 </div>
                 <div>
                   <p className="text-[9px] text-slate-400 uppercase tracking-widest font-bold mb-1">Textile Select</p>

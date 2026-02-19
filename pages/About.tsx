@@ -9,7 +9,7 @@ const About: React.FC = () => {
         <div className="absolute inset-0 z-0 opacity-20">
           <img
             alt="Heritage"
-            className="w-full h-full object-cover grayscale"
+            className="w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1558230315-40ceaba289be?auto=format&fit=crop&q=80&w=2000"
           />
           <div className="absolute inset-0 bg-background-dark/60"></div>
@@ -51,7 +51,7 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="relative">
-              <img className="rounded-3xl shadow-2xl grayscale" src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?auto=format&fit=crop&q=80&w=1000" alt="Excellence" />
+              <img className="rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?auto=format&fit=crop&q=80&w=1000" alt="Excellence" />
               <div className="absolute -bottom-10 -left-10 bg-gold text-black p-10 rounded-3xl hidden md:block border-8 border-white dark:border-background-dark">
                 <p className="text-4xl font-display font-bold italic underline decoration-2 underline-offset-8">Since 2012</p>
               </div>
@@ -82,7 +82,7 @@ const About: React.FC = () => {
               <div className="absolute -inset-4 border border-gold/20 rounded-[3rem] -rotate-3 group-hover:rotate-0 transition-transform duration-700"></div>
               <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-background-dark">
                 <img
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+                  className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
                   src="/assets/our_story_featured.png"
                   alt="HILLS Craftsmanship"
                 />
@@ -140,7 +140,7 @@ const About: React.FC = () => {
             ].map((step, idx) => (
               <div key={idx} className="group">
                 <div className="overflow-hidden rounded-3xl mb-8 aspect-square relative border border-gold/10 shadow-xl">
-                  <img className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" src={step.img} alt={step.title} />
+                  <img className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src={step.img} alt={step.title} />
                   <div className="absolute inset-0 bg-gold/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gold italic font-display">{step.title}</h3>

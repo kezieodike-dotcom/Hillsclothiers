@@ -27,7 +27,7 @@ const Academy: React.FC<AcademyProps> = () => {
                 <div className="absolute inset-0 z-0 opacity-20">
                     <img
                         alt="Academy Heritage"
-                        className="w-full h-full object-cover grayscale"
+                        className="w-full h-full object-cover"
                         src="https://images.unsplash.com/photo-1558230315-40ceaba289be?auto=format&fit=crop&q=80&w=2000"
                     />
                     <div className="absolute inset-0 bg-background-dark/80"></div>
