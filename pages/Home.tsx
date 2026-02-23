@@ -1,6 +1,8 @@
-
 import React from 'react';
+import { motion } from 'motion/react';
 import { Page } from '../types';
+import { TestimonialsColumn } from '../components/ui/testimonials-columns-1';
+import ResponsiveHeroBanner from '../components/ui/responsive-hero-banner';
 
 interface HomeProps {
   onNavigate: (page: Page) => void;
@@ -9,65 +11,43 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
     <div className="animate-fade-in overflow-hidden">
-      {/* Hero Section System */}
-      <section className="relative min-h-screen flex items-center justify-center bg-background-dark py-20 lg:py-40 px-6 lg:px-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 scale-110 lg:scale-100">
-          <img
-            alt="Premium Fashion"
-            className="w-full h-full object-cover opacity-60"
-            src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=2000"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background-dark/95 via-background-dark/70 to-background-dark"></div>
-        </div>
-
-        <div className="relative z-10 max-w-[1244px] mx-auto w-full text-center lg:text-left">
-          <div className="flex flex-col items-center lg:items-start max-w-[800px]">
-            {/* Hero Eyebrow */}
-            <div className="mb-8 animate-fade-in">
-              <span className="text-gold text-sm md:text-base font-medium uppercase tracking-[0.2em] opacity-80 block mb-4">
-                Nigeria's Premier Bespoke Atelier
-              </span>
-              <div className="w-16 h-[2px] bg-gold/50 rounded-full"></div>
-            </div>
-
-            {/* Hero Heading (H1) */}
-            <h1 className="text-[40px] md:text-[64px] lg:text-[84px] font-bold text-white leading-[1.1] mb-8 tracking-[-0.03em] uppercase">
-              Build Your <span className="gold-text-gradient italic font-normal">Legacy</span> <br />
-              Through <span className="text-white">Style</span>
-            </h1>
-
-            {/* Hero Subtext */}
-            <p className="text-lg md:text-2xl text-slate-300 font-normal leading-relaxed mb-12 max-w-[640px] opacity-90">
-              engineering confidence through precision-tailored Senators, Corporate Suits, and Bespoke Couture for the modern African visionary.
-            </p>
-
-            {/* Hero Buttons Container */}
-            <div className="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-              <button
-                onClick={() => onNavigate(Page.SHOP)}
-                className="btn-primary w-full sm:w-auto min-w-[200px]"
-              >
-                Explore Catalog
-              </button>
-              <button
-                onClick={() => onNavigate(Page.CUSTOM_ORDER)}
-                className="btn-outline w-full sm:w-auto min-w-[200px]"
-              >
-                Book An Appointment
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Vertical Delivery Badge - Professional Position */}
-        <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center gap-6">
-          <div className="w-[1px] h-32 bg-gold/20"></div>
-          <span className="text-[10px] font-black uppercase tracking-[0.6em] text-gold/40 vertical-text py-4">
-            LAGOS • LONDON • DUBAI
-          </span>
-          <div className="w-[1px] h-32 bg-gold/20"></div>
-        </div>
-      </section>
+      {/* Hero Section Redesign */}
+      <ResponsiveHeroBanner
+        badgeLabel="Exclusive"
+        badgeText="Nigeria's Premier Bespoke Atelier"
+        title={
+          <>
+            Build Your <span className="gold-text-gradient italic font-normal">Legacy</span> <br />
+            Through <span className="text-white">Style</span>
+          </>
+        }
+        description="engineering confidence through precision-tailored Senators, Corporate Suits, and Bespoke Couture for the modern African visionary."
+        primaryButton={
+          <button
+            onClick={() => onNavigate(Page.SHOP)}
+            className="btn-primary w-full sm:w-auto min-w-[200px]"
+          >
+            Explore Catalog
+          </button>
+        }
+        secondaryButton={
+          <button
+            onClick={() => onNavigate(Page.CUSTOM_ORDER)}
+            className="btn-outline w-full sm:w-auto min-w-[200px]"
+          >
+            Book An Appointment
+          </button>
+        }
+        partnersTitle="Dressing Icons Across the Continent"
+        partners={[
+          // Placeholder partners using a placeholder logo generator since the provided SUPABASE URLs are for space agencies
+          { logoUrl: "https://via.placeholder.com/120x36/D4AF37/FFFFFF?text=LAGOS+LUXURY", href: "#" },
+          { logoUrl: "https://via.placeholder.com/120x36/D4AF37/FFFFFF?text=ABUJA+ELITE", href: "#" },
+          { logoUrl: "https://via.placeholder.com/120x36/D4AF37/FFFFFF?text=DUBAI+STYLE", href: "#" },
+          { logoUrl: "https://via.placeholder.com/120x36/D4AF37/FFFFFF?text=LONDON+FIT", href: "#" },
+          { logoUrl: "https://via.placeholder.com/120x36/D4AF37/FFFFFF?text=AFRICAN+PRIDE", href: "#" },
+        ]}
+      />
 
       {/* Featured Collections */}
       <section className="max-w-7xl mx-auto px-6 py-24">
@@ -194,6 +174,96 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
+      {/* Style App Showcase Section */}
+      <section className="py-24 lg:py-32 bg-gradient-to-br from-[#FFF8E1] via-[#FFF3CD] to-[#FFE082] relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FF6B6B]/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+            {/* Content Side */}
+            <div className="order-2 lg:order-1 space-y-8">
+              <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-black/5 backdrop-blur-sm border border-black/10 rounded-full">
+                <span className="w-2 h-2 rounded-full bg-[#FF6B6B] animate-pulse"></span>
+                <span className="text-[#0B1221] text-[10px] font-black uppercase tracking-[0.3em]">Coming Soon</span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1] text-[#0B1221] tracking-tight">
+                Your Style, <br />
+                <span className="italic" style={{ background: 'linear-gradient(135deg, #D4AF37, #FF6B6B, #00BCD4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Reimagined</span>
+              </h2>
+
+              <p className="text-lg text-[#0B1221]/70 leading-relaxed max-w-[500px]">
+                The Hills Clothiers app brings our bespoke experience to your fingertips. AI-powered style recommendations, virtual fittings, and seamless ordering — all from your phone.
+              </p>
+
+              {/* Feature Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                {[
+                  { icon: 'auto_awesome', title: 'AI Styling', desc: 'Personalized outfit recommendations' },
+                  { icon: 'view_in_ar', title: 'Virtual Try-On', desc: 'See how outfits look on you' },
+                  { icon: 'local_offer', title: 'Exclusive Deals', desc: 'App-only discounts & early access' },
+                  { icon: 'trending_up', title: 'Trend Alerts', desc: 'Stay ahead with curated trends' },
+                ].map((feature, idx) => (
+                  <div key={idx} className="flex items-start gap-4 group">
+                    <div className="w-10 h-10 rounded-xl bg-[#0B1221] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <span className="material-icons text-gold text-lg">{feature.icon}</span>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-[#0B1221] mb-0.5">{feature.title}</h4>
+                      <p className="text-xs text-[#0B1221]/50">{feature.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                <button className="inline-flex items-center justify-center gap-3 h-14 px-8 bg-[#0B1221] text-white font-semibold rounded-2xl hover:bg-[#0B1221]/90 transition-all hover:scale-[1.02] shadow-lg">
+                  <span className="material-icons text-xl">apple</span>
+                  <div className="text-left">
+                    <span className="text-[9px] uppercase tracking-wider opacity-60 block leading-none">Download on the</span>
+                    <span className="text-sm font-bold leading-none">App Store</span>
+                  </div>
+                </button>
+                <button className="inline-flex items-center justify-center gap-3 h-14 px-8 bg-[#0B1221] text-white font-semibold rounded-2xl hover:bg-[#0B1221]/90 transition-all hover:scale-[1.02] shadow-lg">
+                  <span className="material-icons text-xl">shop</span>
+                  <div className="text-left">
+                    <span className="text-[9px] uppercase tracking-wider opacity-60 block leading-none">Get it on</span>
+                    <span className="text-sm font-bold leading-none">Google Play</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            {/* Image Side */}
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-2 border-white/60 group">
+                <img
+                  src="/assets/app_showcase.png"
+                  alt="Hills Clothiers Mobile App Showcase"
+                  className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              {/* Floating Badge */}
+              <div className="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-2xl hidden lg:flex items-center gap-4 border border-gold/20">
+                <div className="w-12 h-12 rounded-xl bg-gold flex items-center justify-center">
+                  <span className="material-icons text-black text-2xl">phone_iphone</span>
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-[#0B1221]">15M+ Downloads</p>
+                  <p className="text-[10px] text-[#0B1221]/50 font-medium uppercase tracking-wider">Fashion Lifestyle App</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Trust & Delivery Section */}
       <section className="bg-primary text-white py-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
@@ -234,17 +304,100 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Testimonial */}
-      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
-        <div className="mb-12">
-          <span className="material-icons text-gold text-6xl opacity-30">format_quote</span>
-        </div>
-        <p className="text-3xl md:text-5xl font-display font-bold leading-tight max-w-4xl mx-auto mb-12">
-          "Hills Clothiers defines the modern African gentleman. The attention to detail in their custom Senators is unlike anything I've seen globally."
-        </p>
-        <div>
-          <h5 className="text-gold font-bold uppercase tracking-widest text-xs mb-2 italic">Hon. Olusola A.</h5>
-          <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">Public Representative</p>
+      {/* Customer Reviews - Scrolling Columns */}
+      <section className="py-24 bg-[#05070A] relative overflow-hidden">
+        <div className="container z-10 mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
+          >
+            <div className="flex justify-center">
+              <div className="border border-gold/30 py-1.5 px-5 rounded-full text-gold text-[10px] font-black uppercase tracking-[0.3em]">
+                Client Stories
+              </div>
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight mt-6 text-white text-center">
+              Voices of <span className="text-gold italic">Distinction</span>
+            </h2>
+            <p className="text-center mt-5 text-slate-400 leading-relaxed">
+              Hear from those who trust Hills Clothiers to define their legacy through style.
+            </p>
+          </motion.div>
+
+          {(() => {
+            const testimonials = [
+              {
+                text: "My senator suit from Hills Clothiers turned heads at the governor's gala. The fabric quality and precision tailoring are genuinely world-class.",
+                image: "https://randomuser.me/api/portraits/men/32.jpg",
+                name: "Chief Emeka Obi",
+                role: "Business Executive",
+              },
+              {
+                text: "I've ordered corporate suits from London and Milan, but nothing compares to the bespoke experience at Hills. They understand the modern African professional.",
+                image: "https://randomuser.me/api/portraits/men/45.jpg",
+                name: "Barrister Tunde A.",
+                role: "Senior Advocate",
+              },
+              {
+                text: "The fitting process was meticulous — every measurement, every preference noted. The final piece fit like it was sculpted onto me.",
+                image: "https://randomuser.me/api/portraits/men/22.jpg",
+                name: "Dr. Ifeanyi Nwosu",
+                role: "Medical Director",
+              },
+              {
+                text: "Hills Clothiers delivered my wedding outfit to Abuja within 24 hours, perfectly packaged. The waybill tracking gave me total peace of mind.",
+                image: "https://randomuser.me/api/portraits/men/55.jpg",
+                name: "Engr. Musa Bello",
+                role: "Project Engineer",
+              },
+              {
+                text: "As someone who values understated luxury, Hills gets it. The fabric selection is premium, the cuts are sharp, and the attention to detail is unmatched.",
+                image: "https://randomuser.me/api/portraits/men/67.jpg",
+                name: "Hon. Olusola Adeyemi",
+                role: "Public Representative",
+              },
+              {
+                text: "I ordered a custom casual collection for my vacation — the cotton blends, the stitching, the silhouette. Everything screamed quality craftsmanship.",
+                image: "https://randomuser.me/api/portraits/men/12.jpg",
+                name: "Chidera Eze",
+                role: "Tech Entrepreneur",
+              },
+              {
+                text: "Their Academy program is brilliant. I enrolled my apprentice and within months, his tailoring skills improved dramatically. Hills invests in the next generation.",
+                image: "https://randomuser.me/api/portraits/women/44.jpg",
+                name: "Madam Funke Ojo",
+                role: "Fashion Designer",
+              },
+              {
+                text: "From the initial consultation to the final delivery, every touchpoint felt premium. This is what luxury service should look like in Nigeria.",
+                image: "https://randomuser.me/api/portraits/men/36.jpg",
+                name: "Alhaji Yusuf Ibrahim",
+                role: "Real Estate Developer",
+              },
+              {
+                text: "I've been a loyal client for 5 years. Every new collection pushes the boundaries of what African menswear can be. Simply visionary.",
+                image: "https://randomuser.me/api/portraits/men/75.jpg",
+                name: "Pastor David Okoro",
+                role: "Church Leader",
+              },
+            ];
+
+            const firstColumn = testimonials.slice(0, 3);
+            const secondColumn = testimonials.slice(3, 6);
+            const thirdColumn = testimonials.slice(6, 9);
+
+            return (
+              <div className="flex justify-center gap-6 mt-12 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+                <TestimonialsColumn testimonials={firstColumn} duration={15} />
+                <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+                <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
+              </div>
+            );
+          })()}
         </div>
       </section>
     </div >
